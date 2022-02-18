@@ -1,0 +1,28 @@
+name: SharedEnderChest
+version: '1.0.0'
+main: works.hirosuke.sharedenderchest.SharedEnderChest
+api-version: 1.18
+prefix: SEC
+authors: [ Hirosuke ]
+description: Share a ender chest for players.
+website: hirosuke.works
+commands:
+  openstorage:
+    aliases:
+      - o
+permissions:
+  sharedstorage.command.*:
+    default: true
+    children:
+      sharedstorage.command.openstorage: true
+      sharedstorage.command.open: true
+      sharedstorage.command.save: true
+      sharedstorage.command.sync: true
+  sharedstorage.command.openstorage:
+    default: true
+  sharedstorage.command.load:
+    default: op
+  sharedstorage.command.save:
+    default: op
+  sharedstorage.command.sync:
+    default: op
